@@ -217,5 +217,111 @@ Always log "Process complete" at the end using .finally().
 // })
 // .catch((e)=>console.log(e))
 
+/**
+ * 
+ * 
+ * Write a function complexCalculation(number) that:
+
+   Multiplies the number by 3 after 1 second.
+   Adds 10 to the result after another 1 second.
+   Divides the result by 2 after another 1 second.
+   Logs the final result.
+ */
+
+// function complexCalculation(num){
+//    return new Promise((resolve,reject)=>{
+//       if(typeof num !== 'number'){
+//          reject("invalid number")
+//       }
+
+//       setTimeout(()=>{
+//          const step1=num*3;
+//          console.log(step1);
+
+//          setTimeout(()=>{
+//             const step2 =step1+10;
+//             console.log(step2);
+
+//             setTimeout(()=>{
+//                const step3 = step2/2;
+//                console.log(step3);
+//                 resolve(step3);
+//             },2000)
+            
+//          },2000)
+         
+//       },2000)
+//    })
+// }
+
+// complexCalculation(10)
+// .then((res)=>{
+//    console.log(res);
+   
+//  })
+
+/**
+ * Write a function doubleThenSubtract(number) that:
+
+   Doubles the given number after 1 second.
+   Subtracts 7 from the result after another 1 second.
+   Returns the final result.
+ */
+
+// function doubleThenSubtract(num){
+//    return new Promise((resolve,reject)=>{
+//       if(typeof num !== 'number'){
+//          reject("Invalid Value")
+//       }
+
+//       setTimeout(()=>{
+//          const step1 = num*2;
+//          console.log(step1);
+
+//          setTimeout(()=>{
+//             const step2 = step1-7;
+//             console.log(step2);
+//             resolve(step2);
+            
+//          },2000)
+         
+//       },2000)
+//    })
+// }
+
+// doubleThenSubtract(20)
+// .then((res)=>{
+//    console.log(res);
+   
+// })
+// .finally(()=>{
+//    console.log("finished");
+   
+// })
+
+function delay(){
+   return new Promise((resolve)=>{
+      setTimeout(()=>{
+         console.log('First');
+         
+      },1000)
+
+      setTimeout(()=>{
+         console.log('Second');
+         
+      },2000)
+
+      setTimeout(()=>{
+         console.log('Third');
+         
+      },3000)
 
 
+   })
+}
+
+delay()
+.then((res)=>{
+   console.log(res);
+   
+})
